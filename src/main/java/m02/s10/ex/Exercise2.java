@@ -4,9 +4,11 @@ import java.util.Arrays;
 
 public class Exercise2 {
     public static void main(String[] args) {
-        // TODO: given a boolean array, swap its values
-        boolean[] flags = { true, false, false };
+        boolean[] flags = { true, false, false, true, false };
 
+        for(int i=0; i<flags.length;i++) {
+        	flags[i]=!flags[i];
+        	}
         System.out.println(Arrays.toString(flags));
     }
 }

@@ -1,29 +1,50 @@
 package m03.s04.ex;
 
 public class Exercise {
-    final static int GAP = 'a' - 'A';
-    final static int ALPHABET_SIZE = 26;
+	final static int GAP = 'a' - 'A';
+	final static int ALPHABET_SIZE = 26;
 
-    /**
-     * A simpler version of String.toUpperCase()
-     * 
-     * @param s
-     * @return uppercase version of input
-     */
-    public String toUpper(String s) {
-        // TODO: create an uppercase version of the input and return it
-        return s;
-    }
+	/**
+	 * A simpler version of String.toUpperCase()
+	 * 
+	 * @param s
+	 * @return uppercase version of input
+	 */
+	public String toUpper(String s) {
 
-    /**
-     * Encrypt an uppercase string using the Caesar's algorithm
-     * 
-     * @param s     a string (uppercase only)
-     * @param shift encrypting key
-     * @return the encrypted string
-     */
-    public String caesarEncrypt(String s, int shift) {
-        // TODO: create an encrypted version of the input and return it
-        return s;
-    }
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < s.length(); i++) {
+			char cur = s.charAt(i);
+			if (cur >= 'a' && cur <= 'z') {
+				sb.append((char) (cur - GAP));
+			} else {
+				sb.append(cur);
+			}
+		}
+		return sb.toString();
+	}
+
+	/**
+	 * Encrypt an uppercase string using the Caesar's algorithm
+	 * 
+	 * @param s     a string (uppercase only)
+	 * @param shift encrypting key
+	 * @return the encrypted string
+	 */
+	public String caesarEncrypt(String s, int shift) {
+		String result = "";
+		s = s.toUpperCase();
+		s = s.replaceAll(" ", "");
+
+		for (int i = 0; i < s.length(); i++) {
+			int j = (int) s.charAt(i) + shift;
+			if (j > 90) {
+				j -= ALPHABET_SIZE;
+			} else if (j < 65) {
+				j += ALPHABET_SIZE;
+			}
+			result += (char) j;
+		}
+		return result;
+	}
 }
