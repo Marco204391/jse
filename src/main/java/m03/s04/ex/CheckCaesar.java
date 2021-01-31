@@ -19,7 +19,7 @@ public class CheckCaesar {
         String input = "CIAO";
         String actual = ex.caesarEncrypt(input, 1);
         String expected = "DJBP";
-        if (!input.equals(expected)) {
+        if (!actual.equals(expected)) {
             System.out.println(String.format("Failure: %s not equals to %s", actual, expected));
         }
     }
