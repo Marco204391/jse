@@ -16,11 +16,13 @@ package m06.s15.ex2;
  */
 
 public class Main {
-    public static void main(String[] args) {
-        Person[] persons = { /* ... */ };
+	public static void main(String[] args) {
+        Person[] persons = {new Consultant("Morgana", "Garbarini"), new Employee("Marco","Lecci"), new Consultant("Rosanna", "Pellicano"),
+        		new Consultant("Simona", "Fartade"),new Consultant("Marika", "Messina"),new Employee("Dylan","Mazzoni"),
+        		new Employee("Alberto","Strafella"),new Employee("Tommaso","Giromini"), new Employee("Riccardo","Padua")};
 
         for (Person person : persons) {
-            System.out.println(person);
+            System.out.println(person.toString());
         }
     }
 }

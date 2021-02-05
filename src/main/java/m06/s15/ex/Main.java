@@ -21,18 +21,26 @@ package m06.s15.ex;
  * In the end, let the user knows who survived
  */
 public class Main {
-    public static void main(String[] args) {
-        // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+	public static void main(String[] args) {
 
-        for (Actor actor : actors) {
-            System.out.println(actor);
-        }
+		Actor[] actors = { new Warrior("Marco"), new Warrior("Dylan"), new Wizard("Emanuele"), new Wizard("Morgana"),
+				new Warrior("Daniele"), new Warrior("Rosanna"), new Wizard("Marika") };
 
-        System.out.println("Let's fight ...");
-        for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
-        }
-    }
+		for (Actor actor : actors) {
+			System.out.println(actor.toString());
+		}
+
+		System.out.println("Let's fight ...");
+		
+		
+		for(int i=0; i<actors.length;i++) {
+			for(int j=i+1; j<actors.length;j++) {
+				if(actors[i].fight(actors[j])) {
+					System.out.println(actors[i].getName()+" has won against "+actors[j].getName());
+				}else {
+					System.out.println(actors[j].getName()+" has won against "+actors[i].getName());
+				}
+			}
+		}
+	}
 }

@@ -1,8 +1,8 @@
 package m06.s15.ex2;
 
 public abstract class Person {
-    private String firstName;
-    private String lastName;
+    protected String firstName;
+    protected String lastName;
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
@@ -19,6 +19,6 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person [firstName=" + firstName + ", lastName=" + lastName + "]";
+        return "Person " + firstName + lastName ;
     }
 }

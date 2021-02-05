@@ -1,12 +1,13 @@
 package m06.s15.ex3;
 
 public abstract class Pet {
+	
+	protected int days;
+	
+	
     public Pet(int days) {
-        // TODO
+        this.days=days;
     }
 
-    public int housing() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
+    public abstract int housing();
 }

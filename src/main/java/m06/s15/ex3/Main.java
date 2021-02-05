@@ -26,6 +26,6 @@ public class Main {
             total += guest.housing();
         }
         
-        System.out.println("Total bill for guests: " + total);
+        System.out.println("Total bill for guests: €" + total);
     }
 }

@@ -8,7 +8,11 @@ public class Exercise2 {
      * @return true if odd
      */
     public static boolean isOdd(int value) {
-        // TODO
+        
+    	if(value==0) {
+    		throw new IllegalArgumentException("Zero not valid");
+    	}
+    	
         return false;
     }
 }
