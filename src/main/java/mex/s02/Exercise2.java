@@ -11,7 +11,6 @@ public class Exercise2 {
      * @return distance
      */
     public static double distance(int x0, int y0, int x1, int y1) {
-        // TODO
-        return 0.0;
+        return Math.sqrt((x0-x1)*(x0-x1) + (y0-y1)*(y0-y1));
     }
 }

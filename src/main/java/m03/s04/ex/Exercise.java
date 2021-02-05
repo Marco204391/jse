@@ -34,22 +34,20 @@ public class Exercise {
 	public String caesarEncrypt(String s, int shift) {
 		String result = "";
 		s = s.toUpperCase();
-		s = s.replaceAll(" ", "");
-		int sup = 'Z'+ ALPHABET_SIZE;
-		int min = 'A'- ALPHABET_SIZE;
-		int c=shift;
-
+		if (s==null|| s.isBlank()){
+			return s;
+		}
 		for (int i = 0; i < s.length(); i++) {
+			int c=shift;
 			if(Math.abs(shift)>ALPHABET_SIZE){
 				c = shift%ALPHABET_SIZE;
 			}
 			int j = (int) s.charAt(i) + c;
-				if (j >'Z'&& j<sup) {
+				if (j >'Z') {
 					j -= ALPHABET_SIZE;
-				} else if (j < 65 && j>min) {
+				} else if (j <'A') {
 					j += ALPHABET_SIZE;
 				}
-
 			result += (char) j;
 		}
 		return result;

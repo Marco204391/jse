@@ -8,7 +8,14 @@ public class Exercise1 {
      * @return "positive", "negative", or "zero"
      */
     public static String checkSign(int value) {
-        // TODO
-        return "";
+        String p= "positive";
+        String n= "negative";
+        String z= "zero";
+        if(value>0){
+            return p;
+        }else if(value<0){
+            return n;
+        }else
+            return z;
     }
 }

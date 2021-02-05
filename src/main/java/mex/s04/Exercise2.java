@@ -10,9 +10,7 @@ public class Exercise2 {
      */
     public static long evenSum(int first, int last) {
         long result = 0;
-
-        // TODO
-
+        long even = (first+last)/2;
         return result;
     }
 }

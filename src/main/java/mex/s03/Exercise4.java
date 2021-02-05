@@ -9,7 +9,9 @@ public class Exercise4 {
      * @return false during weekend or holiday
      */
     public static boolean isAlarmSet(WeekDay day, boolean vacation) {
-        // TODO
-        return false;
+      //  if(!day.compareTo("SATURDAY")&&!day.compareTo("SUNDAY"))
+
+       // return day.compareTo(day);
+        return true;
     }
 }

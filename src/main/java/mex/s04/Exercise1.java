@@ -9,8 +9,13 @@ public class Exercise1 {
      * @return the sum of all the numbers, or zero
      */
     public static long sum(int first, int last) {
-        long result = 0;
-        // TODO
-        return result;
+        long sum=0;
+        if(first>last) {
+            return 0;
+        }
+        for(int i=first;i<=last; i++){
+                sum += i;
+        }
+        return sum;
     }
 }

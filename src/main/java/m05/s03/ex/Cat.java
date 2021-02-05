@@ -8,15 +8,16 @@ public class Cat {
 
     /**
      * Cat with a given name and color
-     * 
+     *
      * bad parameter names, see "this"
-     * 
+     *
      * @param n
      * @param c
      */
     public Cat(String name, String color) {
-        // TODO: initialize the object
-        // TODO: increase the counter
+        this.name=name;
+        this.color=color;
+        count++;
     }
 
     /**
@@ -26,11 +27,15 @@ public class Cat {
         return count;
     }
 
+    public String getName(){
+        return name;
+    }
     /**
      * The current cat meow on the console
      */
     public void meow() {
         // TODO: Print name and color to System.out
+        System.out.println("Sono il gatto "+name+" e sono di colore "+color);
     }
 
     /**
@@ -40,10 +45,12 @@ public class Cat {
      */
     public void meow(String word) {
         // TODO: Print word, cat name and color to System.out
+        System.out.println("Sono il gatto "+name+" e sono di colore "+color+"e miagolo così :"+word);
     }
 
     @Override
     public String toString() {
         return "Cat [name=" + name + ", color=" + color + "]";
     }
+
 }
