@@ -6,7 +6,7 @@ public class Exercise {
 
 	/**
 	 * A simpler version of String.toUpperCase()
-	 * 
+	 *
 	 * @param s
 	 * @return uppercase version of input
 	 */
@@ -26,7 +26,7 @@ public class Exercise {
 
 	/**
 	 * Encrypt an uppercase string using the Caesar's algorithm
-	 * 
+	 *
 	 * @param s     a string (uppercase only)
 	 * @param shift encrypting key
 	 * @return the encrypted string
@@ -34,15 +34,20 @@ public class Exercise {
 	public String caesarEncrypt(String s, int shift) {
 		String result = "";
 		s = s.toUpperCase();
-		s = s.replaceAll(" ", "");
-
+		if (s==null|| s.isBlank()){
+			return s;
+		}
 		for (int i = 0; i < s.length(); i++) {
-			int j = (int) s.charAt(i) + shift;
-			if (j > 90) {
-				j -= ALPHABET_SIZE;
-			} else if (j < 65) {
-				j += ALPHABET_SIZE;
+			int c=shift;
+			if(Math.abs(shift)>ALPHABET_SIZE){
+				c = shift%ALPHABET_SIZE;
 			}
+			int j = (int) s.charAt(i) + c;
+				if (j >'Z') {
+					j -= ALPHABET_SIZE;
+				} else if (j <'A') {
+					j += ALPHABET_SIZE;
+				}
 			result += (char) j;
 		}
 		return result;

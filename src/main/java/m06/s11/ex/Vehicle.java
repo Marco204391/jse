@@ -9,4 +9,9 @@ public class Vehicle {
     public Vehicle() {
         log.info("Vehicle created");
     }
+
+    public String steer(String s) {
+        return "Ho girato a " + s;
+    }
+
 }

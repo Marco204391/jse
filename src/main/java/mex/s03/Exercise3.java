@@ -8,7 +8,10 @@ public class Exercise3 {
      * @return "zero" for 0 ... "nine" for 9, or "other"
      */
     public static String asWord(int value) {
-        // TODO
-        return "";
+        String[] number = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "other"};
+        if(value<10&&value>=0){
+            return number[value];
+        }
+        return number[10];
     }
 }

@@ -10,7 +10,6 @@ public class Exercise3 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-        // TODO
-        return 0.0;
+        return (((Math.PI*(bore/2)*(bore/2))*stroke)/1000)*nr;
     }
 }
